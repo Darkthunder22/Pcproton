@@ -1,0 +1,86 @@
+<!-- quotes.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request a Quote | Pcproton</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-neutral-950 text-white flex flex-col min-h-screen font-sans">
+
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-8 py-6">
+    <h1 class="text-2xl font-bold tracking-tight">Pc<span class="text-indigo-500">proton</span></h1>
+    <nav class="hidden md:flex gap-8 text-sm">
+      <a href="index.html" class="hover:text-indigo-400">Home</a>
+      <a href="about.html" class="hover:text-indigo-400">About</a>
+      <a href="builds.html" class="hover:text-indigo-400">Builds</a>
+      <a href="contact.html" class="hover:text-indigo-400">Contact</a>
+      <a href="quotes.html" class="text-indigo-500 font-semibold">Get a Quote</a>
+    </nav>
+    <button class="md:hidden p-2 border rounded border-white/30">☰</button>
+  </header>
+
+  <!-- Quote Form -->
+  <main class="flex-1 flex flex-col items-center px-6 py-12">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-center">Request a PC Build Quote</h2>
+    <p class="text-gray-400 mb-10 max-w-xl text-center">
+      Tell us your budget and what the PC is for.  
+      We'll reply with a personalised build quote.
+    </p>
+
+    <form action="mailto:pcpquotes@proton.me" method="POST" enctype="text/plain"
+      class="bg-neutral-900 p-8 rounded-xl border border-neutral-800 max-w-xl w-full space-y-6">
+
+      <div>
+        <label class="block mb-1 text-gray-300">Your Name</label>
+        <input type="text" name="Name" required
+          class="w-full p-3 rounded bg-neutral-800 text-white border border-neutral-700 focus:outline-none" />
+      </div>
+
+      <div>
+        <label class="block mb-1 text-gray-300">Your Email</label>
+        <input type="email" name="Email" required
+          class="w-full p-3 rounded bg-neutral-800 text-white border border-neutral-700 focus:outline-none" />
+      </div>
+
+      <div>
+        <label class="block mb-1 text-gray-300">Budget (£)</label>
+        <input type="number" name="Budget" required
+          class="w-full p-3 rounded bg-neutral-800 text-white border border-neutral-700 focus:outline-none" />
+      </div>
+
+      <div>
+        <label class="block mb-1 text-gray-300">Purpose of the PC</label>
+        <select name="Purpose"
+          class="w-full p-3 rounded bg-neutral-800 text-white border border-neutral-700 focus:outline-none">
+          <option>Gaming</option>
+          <option>School / Productivity</option>
+          <option>Video Editing</option>
+          <option>Streaming</option>
+          <option>General Use</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block mb-1 text-gray-300">Additional Details</label>
+        <textarea name="Details" rows="4"
+          class="w-full p-3 rounded bg-neutral-800 text-white border border-neutral-700 focus:outline-none"></textarea>
+      </div>
+
+      <button type="submit"
+        class="w-full bg-indigo-600 hover:bg-indigo-700 transition rounded-lg py-3 text-sm font-semibold">
+        Submit Quote Request
+      </button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm py-6 border-t border-gray-800 mt-10">
+    © 2025 Pcproton — Budget builds made properly.
+  </footer>
+
+</body>
+</html>
